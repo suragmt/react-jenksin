@@ -9,6 +9,7 @@ import {
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
+import { Outlet } from 'react-router-dom';
 
 export function Counter() {
   const count = useSelector(selectCount);
@@ -62,6 +63,7 @@ export function Counter() {
           Add If Odd
         </button>
       </div>
+      <Outlet/>
     </div>
   );
 }
